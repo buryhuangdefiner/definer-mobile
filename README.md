@@ -256,3 +256,17 @@ GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts
 ```
 GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts
 ```
+### 资金转入
+目前不支持.
+Wyre目前支持跳转页面
+
+### 资金转换
+```
+智能合约
+kyberNetworkProxy->swapTokenToEther
+kyberNetworkProxy->swapEtherToToken
+kyberNetworkProxy->swapTokenToToken
+```
+
+###
+
