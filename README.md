@@ -310,6 +310,7 @@ SavingAccount->repay(tokenAddress, amount)
 
 ### 操作记录
 账号地址: 0xdc7c68458cf288b5367978469387cf0e9c5728fc
+
 tokenSymbol: FIN
 ```
 GET https://api.definer.org/<API_KEY>/definer/api/v1.0/saving_pool/<账号地址>/transactions/<tokenSymbol>
@@ -341,4 +342,9 @@ GET https://api.definer.org/<API_KEY>/definer/api/v1.0/saving_pool/<账号地址
 	"timestamp": 1574214911.149656,
 	"transactionId": "0x35903ae0b4481ae259cc26a525332e5132804039724fb6b99031a49e4a5a5378"
 }]
+```
+## 创建新合同 (等同于调整合同)
+新合同ID: 103ddf7320c04a4aac88738d977dca53
+```
+POST https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts/<新合同ID>
 ```
