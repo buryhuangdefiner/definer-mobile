@@ -240,3 +240,19 @@ POST https://cognito-idp.us-east-1.amazonaws.com/
 	}]
 }
 ```
+### 借出首页 (所有页面数据来自于 合同主列表)
+```
+GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts
+```
+### 借入首页 (所有页面数据来自于 合同主列表)
+```
+GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts
+```
+### 我发布的借入 (所有页面数据来自于 合同主列表)
+```
+GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts
+```
+### 我发布的借出 (所有页面数据来自于 合同主列表)
+```
+GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts
+```
