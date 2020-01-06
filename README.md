@@ -268,5 +268,77 @@ kyberNetworkProxy->swapEtherToToken
 kyberNetworkProxy->swapTokenToToken
 ```
 
-###
+### 我的存款
+#### 主页面
+```
+智能合约
+SavingAccount->getBalances(accountAddress)
+0: address[]: addresses 0x000000000000000000000000000000000000000E,0x8c8c812ea7bb3c32B45645f7cbf84c7F902049d6,0xdAC17F958D2ee523a2206206994597C13D831ec7,0x36e5aA7Ee4D004067eE3D0177F805269434DdC83,0x388B0D6c519B1a502302f81a56EFeDA0B137d9c1,0xaB8Ad2d7f39A54960Be8b71e01276a9E897833eE
+1: int256[]: balances 0,0,0,0,0,10000115562350000000
+```
+#### 转入
+```
+智能合约
+SavingAccount->DepositToken(tokenAddress, amount)
+```
 
+#### 转出
+```
+智能合约
+SavingAccount->WithdrawToken(tokenAddress, amount)
+```
+
+### 我的借款
+#### 主页面 (等同于 我的存款 函数)
+```
+智能合约
+SavingAccount->getBalances(accountAddress)
+0: address[]: addresses 0x000000000000000000000000000000000000000E,0x8c8c812ea7bb3c32B45645f7cbf84c7F902049d6,0xdAC17F958D2ee523a2206206994597C13D831ec7,0x36e5aA7Ee4D004067eE3D0177F805269434DdC83,0x388B0D6c519B1a502302f81a56EFeDA0B137d9c1,0xaB8Ad2d7f39A54960Be8b71e01276a9E897833eE
+1: int256[]: balances 0,0,0,0,0,10000115562350000000
+```
+#### 借款
+```
+智能合约
+SavingAccount->borrow(tokenAddress, amount)
+```
+
+#### 还款
+```
+智能合约
+SavingAccount->repay(tokenAddress, amount)
+```
+
+### 操作记录
+账号地址: 0xdc7c68458cf288b5367978469387cf0e9c5728fc
+tokenSymbol: FIN
+```
+GET https://api.definer.org/<API_KEY>/definer/api/v1.0/saving_pool/<账号地址>/transactions/<tokenSymbol>
+[{
+	"accountId": "0xdc7c68458cf288b5367978469387cf0e9c5728fc",
+	"data": {
+		"amount": 0.0001,
+		"blockNumber": 5458139,
+		"gasUsed": 862531,
+		"token": "FIN",
+		"tokenAddr": "0xaB8Ad2d7f39A54960Be8b71e01276a9E897833eE",
+		"type": "withdraw",
+		"wei": 20009955194034835456
+	},
+	"status": "ok",
+	"timestamp": 1574044756.676142,
+	"transactionId": "0x74953a3047424a0134fa60b16800af00892cae2905a0f96bc9deb11249835838"
+}, {
+	"accountId": "0xdc7c68458cf288b5367978469387cf0e9c5728fc",
+	"data": {
+		"amount": 0.0004,
+		"blockNumber": 5471716,
+		"gasUsed": 862531,
+		"token": "FIN",
+		"tokenAddr": "0xaB8Ad2d7f39A54960Be8b71e01276a9E897833eE",
+		"type": "withdraw"
+	},
+	"status": "ok",
+	"timestamp": 1574214911.149656,
+	"transactionId": "0x35903ae0b4481ae259cc26a525332e5132804039724fb6b99031a49e4a5a5378"
+}]
+```
