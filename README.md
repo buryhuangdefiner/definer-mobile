@@ -136,7 +136,7 @@ GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts
 ### 详情
 合同ID: a1a785aea7524b3d83c3103c00cbb0e2
 ```
-GET https://api.definer.org/OKh4I2yYpKU8S2af/definer/api/v1.0/contracts/<合同ID>
+GET https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts/<合同ID>
 {
 	"contractId": "a1a785aea7524b3d83c3103c00cbb0e2",
 	"create_time": "2019-09-29 02:39:01",
@@ -176,4 +176,9 @@ GET https://api.definer.org/OKh4I2yYpKU8S2af/definer/api/v1.0/contracts/<合同I
 	},
 	"status": 0
 }
+```
+### 调整合同 (等同于创建新合同)
+新合同ID: 103ddf7320c04a4aac88738d977dca53
+```
+POST https://api.definer.org/<API_KEY>/definer/api/v1.0/contracts/<新合同ID>
 ```
